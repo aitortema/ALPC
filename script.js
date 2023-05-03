@@ -1,4 +1,4 @@
-const countdownElement = document.getElementById('countdown');
+const countdownElement = document.getElementById('cuentaatras');
 const targetDate = new Date("2023-12-10T14:00:00").getTime(); // Cambia la fecha al objetivo deseado
 
 function updateCountdown() {
