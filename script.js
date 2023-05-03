@@ -1,21 +1,24 @@
-const countdownElement = document.getElementById('cuentaatras');
-const targetDate = new Date("2023-12-10T14:00:00").getTime(); // Cambia la fecha al objetivo deseado
+const cuentaAtras = document.getElementById('cuentaAtras');
+const fechaFin = new Date("2023-12-10T14:00:00");
 
-function updateCountdown() {
+function actualizarCuentaAtras() {
     const now = new Date().getTime();
-    const timeRemaining = targetDate - now;
+    const tiempoRestante = fechaFin - now;
 
-    const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+    const dias = Math.floor(tiempoRestante / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((tiempoRestante % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutos = Math.floor((tiempoRestante % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((tiempoRestante % (1000 * 60)) / 1000);
 
-    countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    cuentaAtras.innerHTML = `${dias}d ${horas}h ${minutos}m ${segundos}s`;
 
-    if (timeRemaining < 0) {
+    if (tiempoRestante < 0) {
         clearInterval(countdownInterval);
-        countdownElement.innerHTML = "Sánchez se ha ido ATPC 😀";
+        cuentaAtras.innerHTML = "El presidente se ha ido por fin 😀";
     }
 }
 
-const countdownInterval = setInterval(updateCountdown, 1000);
+const countdownInterval = setInterval(actualizarCuentaAtras, 1000);
+
+const fechaFinalElement = document.getElementById('fechaFinal');
+fechaFinalElement.innerHTML = `Fecha final del mandato: ${fechaFin.toLocaleDateString()}`;
