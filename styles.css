@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Tahoma, sans-serif;
     text-align: center;
     background-color: #f0f0f0;
 }
@@ -8,7 +8,12 @@ h1 {
     color: #333;
 }
 
-#countdown {
-    font-size: 2rem;
+#cuentaAtras {
+    font-size: 3rem; /* Aumentamos el tamaño a 3 rem */
     color: #ff0000;
+}
+
+#fechaFinal {
+  font-size: 1.2 rem;
+  color: #eb0eca;
 }
