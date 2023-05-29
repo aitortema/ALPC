@@ -1,5 +1,5 @@
 const cuentaAtras = document.getElementById('cuentaAtras');
-const fechaFin = new Date("2023-12-10T14:00:00");
+const fechaFin = new Date("2023-07-23T21:00:00");
 
 function actualizarCuentaAtras() {
     const now = new Date().getTime();
